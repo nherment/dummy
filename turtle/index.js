@@ -143,7 +143,7 @@ function Turtle() {
       var generatedTemplateFilePath = generateHtmlWrapper(templateOptions, tests);
 
       var processHandle = child_processes.spawn(
-        __dirname + '/node_modules/mocha-phantomjs/bin/mocha-phantomjs',
+        __dirname + '/../node_modules/mocha-phantomjs/bin/mocha-phantomjs',
         [
           generatedTemplateFilePath,
           '-s',
@@ -151,7 +151,7 @@ function Turtle() {
           '-s',
           'localToRemoteUrlAccessEnabled=true',
           '--path',
-          __dirname + '/node_modules/phantomjs/bin/phantomjs',
+          __dirname + '/../node_modules/phantomjs/bin/phantomjs',
           '-C'
         ],
         {
